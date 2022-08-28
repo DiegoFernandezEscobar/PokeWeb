@@ -1,7 +1,10 @@
 import './App.css';
-import RenderLogo from './componets/CartWidgets';
 import PokeNav from './componets/navBar'
-import AutoLayoutExample from "./componets/CartWidgets"
+import ContenedorCartas from './componets/cartas/contenedorCartas';
+import Datos from './componets/novedadSemana/datosNovedades';
+import BtnEsconder from './componets/funcionalidades/btnEsconder';
+
+
 
 function App() {
   return (
@@ -11,9 +14,18 @@ function App() {
        {/* // titulo pagina */}
     <h3 className='top3Titulo'> Enterate del top 3 de esta semana! </h3> 
      {/* // trae dinamicamente un top 3 pokemons */}
-     <AutoLayoutExample name="Charizard"/>
-     <AutoLayoutExample name="Pikachu"/>
-     <AutoLayoutExample name="Squirtle"/>
+     <Datos/>
+      
+    {/* Grilla de productos con botonera para seleccionar cuantos */}
+    <h3 className='top3Titulo'>Mira la coleccion de cartas que tenemos disponible para vos! </h3> 
+    <div class="d-flex justify-content-around">
+<ContenedorCartas/>
+    </div>
+   <div className='top3Titulo'>
+    <BtnEsconder/>
+   </div>
+
+
     {/* seleccionalos por clase */}
 
     </div>
